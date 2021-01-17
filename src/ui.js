@@ -1,7 +1,7 @@
 (function() {
 
     CELL_SIZE = 100;
-    NUM_CLASSES = 3;
+    NUM_CLASSES = 5;
     IMAGE_SIZE = 28;
 
     function UI() {
@@ -18,7 +18,8 @@
             this._cells[i].onChange = this._cellChanged.bind(this);
         }
 
-        this._loadDefault();
+        //this._loadDefault();
+		this._cellChanged();
     }
 
     UI.prototype._setupTrainElement = function() {
@@ -96,7 +97,7 @@
     };
 
     UI.prototype._gotResult = function(obj) {
-        console.log(obj);
+        //console.log(obj);
         this._predictions.setEnabled(true);
         this._predictions.setProbs(obj.probs);
     };
