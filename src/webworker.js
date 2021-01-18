@@ -1,4 +1,4 @@
-var SGD_LR = 0.002;
+var SGD_LR = 0.001;
 var NUM_STEPS = 5;
 
 self.onmessage = function(msg) {
